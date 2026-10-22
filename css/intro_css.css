@@ -1,0 +1,81 @@
+/*body {
+      background:url("../images/intro_image.jpg") no-repeat fixed center / cover transparent;
+      background-size: 100% 100%;
+}*/
+body {
+    background:url(../images/back.jpg) center no-repeat;
+  background-size: 100%;
+  margin: 0;
+   
+}
+.bg_ba{
+  width: 100%;
+  margin: 0 auto;
+  height: 500px;
+}
+.logo_img{
+  width:340px;
+  float: left;
+  height:410px;
+  background:url(../images/logo1.png)  no-repeat center;
+  background-size: 100%;
+  margin-left: 20%;
+margin-top: 35px;
+}
+.typogr{
+  float: left;
+  width: 70%;
+}
+.typogr h6{
+  text-align: center;
+  margin: 0;
+  width: 600px;
+  height: 55px;
+  background:#363636 url(../images/typobond.png) right no-repeat;
+  background-position: 220px;
+  background-size: 380px;
+  margin-top: 15px;
+ float: left;
+
+}
+.typogr h6:hover{
+    background:#616060 url(../images/typobond.png) right no-repeat;
+  background-position: 220px;
+  background-size: 380px;
+  
+}
+
+@media
+only screen and (max-width: 480px),
+only screen and (-webkit-max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (   max--moz-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (     -o-max-device-pixel-ratio: 2/1)    and (max-width: 480px),
+only screen and (        max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (                max-resolution: 192dpi) and (max-width: 480px),
+  only screen and (                max-resolution: 2dppx)  and (max-width: 480px) {
+    
+    
+    body{
+       background-size:cover;
+   
+background-size: 320px 480px;
+    }
+    .bg_ba{
+      width: auto;
+    }
+    .logo_img{
+     
+      width: auto;
+      margin:0;
+      margin-left: 12px;
+      
+    }
+    .typogr{
+      width: auto;
+    }
+    .typogr h6{
+      width: 280px;
+      background-size: 90%;
+      background-position: 15px;
+    }
+} 

@@ -1,0 +1,1905 @@
+@font-face {
+    font-family: "Dual";
+    src: url(../fonts/Dual.otf);
+    src: url(../fonts/Dual.ttf);
+    font-weight: normal;
+    font-style: normal
+}
+::-webkit-input-placeholder {
+   color: #fff;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+
+:-ms-input-placeholder {  
+   color: #fff;  
+}
+body {
+    margin:0;
+    background:#000;
+}
+/**
+ * CSS styles for CLinkPager.
+ *
+ * @author Qiang Xue <qiang.xue@gmail.com>
+ * @link http://www.yiiframework.com/
+ * @copyright 2008-2010 Yii Software LLC
+ * @license http://www.yiiframework.com/license/
+ * @since 1.0
+ */
+.hidden_show {
+	display:none !important;
+}
+ .image_alt {
+    float: none !important;
+    font-style: italic;
+}
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+ border-radius: 50%;
+opacity: 0.7;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background: #000 url("../images/Back to top.png") no-repeat scroll center center;
+    background-size: 100% 100%;
+    background-position: 0px;
+}
+.menu_top_search.marg > ul {
+	margin:0px !important;
+}
+.menu_active {
+	color:#F5C40B !important;
+}
+
+.page_title{
+    font-family: dual;
+    font-size: 15px;
+    margin: auto;
+    text-align: center;
+    top: -15px;
+    width: 1000px;
+    
+}
+
+ul.yiiPager
+{
+	font-size:11px;
+	border:0;
+	margin:0;
+	padding:0;
+	line-height:100%;
+	display:inline;
+	top: 25px;
+    position: relative;
+}
+
+ul.yiiPager li
+{
+	display:inline;
+    width: 100%;
+   
+ 
+    
+}
+/*.page > a, .page {
+    display: block!important;
+ 
+    
+}*/
+
+.previous{
+    float: right;
+    width: auto!important;
+}
+.next{
+    float: left!important;
+     width: auto!important;
+    display: inline;
+    
+position:releteive;
+}
+ul.yiiPager a:hover{
+    background: none;
+}
+ul.yiiPager a:focus{
+    outline: none;
+    background: none;
+}
+ul.yiiPager a:link,
+ul.yiiPager a:visited
+{
+  border-radius: 0;
+    border:none;
+	font-weight:bold;
+	color:#A4A6A9;
+	padding:7px 30px;
+	text-decoration:none;
+	margin-left: 20px;
+    font-size: 15px;
+    font-family: dual;
+}
+
+
+
+ul.yiiPager .page a
+{
+    font-weight:normal;
+    color: #A9A9AB;
+    border: 1px solid;
+    margin-right: 550px;
+    position: relative;
+    right: 0px;
+    float: right;
+    width: 40px!important;
+   
+}
+
+
+
+ul.yiiPager .selected a
+{
+border-color: #FFCB08;
+	color:#A9A9AB;
+	font-weight:bold;
+    width:auto;
+    direction: rtl;
+    background: #fff;
+    text-align: right;
+    position: relative;
+    margin-right: 0px;
+    top: -26px;
+    right: -550px;
+    float: left;
+
+
+    
+    
+
+}
+ul.yiiPager .hidden a
+{
+	border:solid 1px #DEDEDE;
+	color:#888888;
+    float: right;
+}
+
+
+
+/**
+ * Hide first and last buttons by default.
+ */
+ul.yiiPager .first,
+ul.yiiPager .last
+{
+	display:none;
+}
+.lang_re {
+    height: 38px;
+    padding-top: 9px;
+    text-align: center;
+}
+
+.view_works_scroll{
+ 
+    float: right;
+    width: 100%;
+    position: relative;
+    top: -50px;
+}
+.social1 > a {
+    font-size: 19px !important;
+}
+.nothing-found {
+    color: #b2b2b2;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+    min-height: 200px;
+    text-align: center;
+    width: auto;
+}
+.lang {
+    color: #909090;
+    float: right;
+    font-size: 14px;
+    margin-right: 27px;
+    margin-top: 8px;
+}
+.selected {
+	color:#F5C40B;
+       font-weight: bold;
+   
+  
+}
+.selected_lang{
+    color:#F5C40B;
+       font-weight: bold;
+    
+}
+
+.lang-fa {
+border-image: linear-gradient(to bottom, #ffcb08, rgba(0, 0, 0, 0)) 1 100% 1 100%;
+    border-left: 1px solid;
+    margin-left: 8px;
+    padding-left: 8px;
+border-right:0;
+ font-size: 16px;
+}
+.lang-icon {
+	cursor:pointer;
+	font-family: "dual";
+}
+.clear {
+	clear:both;
+}
+.work_more {
+	margin-top:40px;
+	
+	font-size:15px;
+}
+.work_all {
+    font-weight: bold;
+    margin: 30px 0;
+    text-align: center;
+}
+.work_more a{
+	color:#FFCB08;
+}
+.copy_r > a {
+  color: #c3c3c3 !important;
+    font-size: 12px !important;
+}
+
+.well {
+	z-index:99;
+}
+.teleg-ico {
+	background-color:#FFCB08;
+	border-radius:5px;
+	width:21px !important;
+
+}
+.artist-summary {
+	color: #afafb0;font-size: 14px !important;
+}
+.artist-work {
+	color:#FFCB08 !important;
+	   font-family: "Dual";
+    font-weight: bold;
+}
+.artist-work:hover{
+	color:#ADADAD !important; 
+}
+.teleg-ico:hover {
+	background-color:#ADADAD;
+}
+.teleg-ico-content {
+	background-color:#FFCB08;
+	border-radius:5px;
+	width:19px !important;
+	display: inline-block;
+    float: left;
+    height: 18px;
+    margin-right: 5px;
+}
+.teleg-ico-content:hover {
+	background-color:#adadad;
+}
+.bl_menu{
+    display: none;
+}
+.bg_sobhan{
+     height: 200%;
+    left: -50%;
+    position: fixed;
+    top: -50%;
+    width: 200%;
+}
+.bg_sobhan img{
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border: none;
+}
+.logo_sobhan{
+    float: right;
+    width: 100%;
+    height: 105px;
+    position: relative;
+    z-index: 9999;
+    margin-top:25%;
+    background: rgba(0,0,0,0.8)
+}
+.logo_sobhan p{
+    width: 470px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: left;
+    font-size: 70px;
+    
+}
+.filter_artist_year .active_in{
+     border-radius: 7px;
+   color:#FFCB08!important; 
+    text-decoration: none;
+    outline: none;
+    font-weight: bolder;
+ margin-right: 10px;
+}
+.marg .scrollup{
+    float: right;
+    right:15px;
+}
+
+.line_in{
+    width: 100%;
+    margin: 0 auto;
+    height: 34px;
+	background-image:url('../images/line-under-logo-001.png');
+    background-repeat: no-repeat;
+    
+}
+
+.logo_sobhan p span{
+    margin-left: 4px;
+    text-shadow:1px 0px 30px
+}
+.logo_sobhan img{
+    float: right;
+    width: auto;
+    height: 98px;
+    margin-right: 165px;
+    margin-top: 5px;
+    
+}
+.logo_sobhan a{
+    outline: none;
+    text-decoration: none;
+}
+.describe{
+    position: relative;
+    z-index: 1;
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+}
+.describe p{
+    text-align: right;
+    direction: rtl;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: #fff;
+    font-family: b yekan;
+    font-size: 14px;
+}
+.gallery_img{
+    margin: 0!important;
+    width: auto!important;
+    float: right;
+    
+}
+header i{
+    font-size: 30px!important;
+    width: 35px;
+    float: right;
+    margin-top: 10px;
+    text-align: center;
+    color:#FFCB08;
+    transition-property:all;
+    transition-duration: 0.8s, 0.65s, 0.60s;
+    transition-timing-function:  ease, ease-out, linear;
+}
+header i:hover{
+    color: #EDBC34;
+}
+.cd-dropdown-trigger{
+    outline: none!important;
+}
+.cd-dropdown-wrapper{
+    
+}
+header{
+  float: right;
+    width: 100%;
+    height: 140px;
+    background: #363636;
+	background-image:url("../images/Sobhan_ta.png");
+	background-repeat:no-repeat;
+	background-size:450px;
+    background-position:center -85px;
+}
+.logo_left_sobhan{
+    float: left;
+    width: 100px;
+    height: 90px;
+    margin-top: 44px;
+}
+.logo_left_sobhan img{
+    width:80px;
+    float: left;
+    margin-left: 0px;
+    margin-top: -17px;
+}
+.search{
+    float: right;
+    width: 20%;
+    height: 35px;
+    margin-top: -10px;
+}
+.search input{
+    float: left;
+    width: 170px;
+    height: 30px;
+    border: 1px solid;
+    background: #363636;
+    text-align: left;
+    padding-left: 8px;
+    color: #fff;
+    border-color:#363636; 
+    direction: ltr;
+   margin-top: 12px;
+ font-family: "Dual";
+    font-weight: bold;
+}
+.search button{
+    float: left;
+    width: 20px;
+    height: 25px;
+    margin-left: -8px;
+    border: 1px solid;
+    background:url(../images/search_ic.png) no-repeat;
+    background-size: 95%;
+    background-position: 0px;
+    border-color:#363636; 
+    margin-top: 12px;
+}
+.search_re{
+    height: 45px;
+    margin-top: -10px;
+}
+.search_re input{
+    float: left;
+    width: 170px;
+    height: 30px;
+    border: 1px solid;
+    background: #363636;
+    text-align: left;
+    padding-left: 8px;
+    color: #ddd;
+    border-color:#363636; 
+    direction: ltr;
+   margin-top: 12px;
+ font-family: "Dual"!important;
+    font-weight: bold;
+}
+.search_re button{
+    width: 25px;
+    height: 30px;
+    margin-left: -8px;
+    border: 1px solid;
+    background:url(../images/search_ic.png) no-repeat;
+    background-size: 95%;
+    background-position: 0px;
+    border-color:#363636; 
+    margin-top: 12px;
+}
+
+.menu_top_search{
+    float: left;
+    width: 92%;
+    height: 35px;
+    margin-top: 96px;
+}
+.menu_top_search ul li{
+    float: left;
+    padding-left: 22px;
+    margin-left: 20px;
+    margin-top: 4px;
+    border-width: 2px; border-style: solid;border-right: 0; -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%; -webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%; -moz-border-image: -moz-linear-gradient(#ffcb08, rgba(0, 0, 0, 0)) 1 100%; -o-border-image: -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%; border-image: linear-gradient(to bottom, #ffcb08, rgba(0, 0, 0, 0)) 1 100%;
+   
+}
+.menu_top_search a{
+    font-family:"Dual";
+    font-size: 16px;         
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+font-weight: bold;
+}
+.menu_top_search a:hover{
+    color: #6F6F6F;
+}
+.slide_show{
+    width: 100%;
+    float: right;
+    height: 423px;
+}
+.right_col{
+    float: right;
+    width: 50%;
+    height: auto;
+ margin-bottom: 40px;
+}
+.right_col img{
+    width: 100%;
+    
+}
+.info_artist{
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    height: auto;
+}
+.info_artist ul{
+    width: 100%;
+    text-align: left;
+}
+.info_artist h4{
+    padding-left: 5px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #363636; 
+font-family: "Dual";
+}
+.social1 .fa-facebook-official,.fa-instagram,.fa-twitter,.fa-linkedin-square{
+    font-size: 20px;
+}
+.info_artist li{
+    padding-left: 5px;
+    font-family: "Dual";
+    font-weight: bold;
+    font-size: 13px;
+    color: #959595;
+    margin-top: 4px;
+}
+.info_artist a{
+    color: #FFCB08;
+    font-family: "Dual";
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+}
+.info_artist a:hover{
+    color: #ADADAD;
+}
+.info_artist .box_info_loc{
+    float: left;
+    width: 100%;
+    margin-top: 8px;
+}
+.left_col1{
+    float: left;
+    width: 48%;
+    height: auto;
+    margin-bottom: 45px;
+}
+
+.left_col1 p{
+    margin: 0;
+    /*float: left;*/
+    width: 100%;
+    color: #959595;
+    font-size:14px;
+    font-family: rooney-sans,Roboto;
+}
+.left_col1 h4{
+   text-align: left;
+    font-size: 25px;
+   width: auto;
+ font-family: "Dual";
+    font-weight: bold;
+}
+.left_col1 h6{
+   font-family: "Dual";
+    font-weight: bold;
+    text-align: left;
+
+	
+}
+.left_col1 span{
+    float: left;
+    width: 100%;
+}
+
+.box_content{
+    border: 1px solid;
+    /*! float: right; */
+     width: 100%!important;
+    margin: 0;
+    height: auto;
+    margin-top: px;
+    border-top-color: #ddd;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+.box_pic{
+    /*border: 1px solid;*/
+    float: right;
+    width: 229px;
+    height: auto;
+    margin-right: 27px;
+    /*border-color: #ddd;*/
+    border-radius: 2px;
+    margin-top: 65px; 
+}
+.box_pic p{
+    text-align: left;
+    direction: rtl;
+    color: #7A7A7B;
+  
+     font-family: "Dual";margin-top:10px;
+	 float:left;
+    font-weight: bold;
+}
+.box_pic span {
+    color: #adadad;
+    direction: ltr;
+    float: left;
+    font-family: "Dual";
+        font-style: italic;
+    text-align: left;
+    width: 100%;
+}
+.box_pic img{
+    width: 100%;
+    float: right;
+    height: auto;
+}
+.box_pic a{
+    outline: none;
+    text-decoration: none;
+}
+.box_pic p:hover{
+    color:#9D7450;
+    
+}
+.video_content{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-top: 100px
+}
+.video_box{
+    width: 445px;
+    margin-left: 25px;
+    float: left;
+	height:250px;
+     border-color: #ddd; 
+	margin-top:65px;
+}
+.video iframe{
+    width: 450px;
+    height: 250px;
+    border: 0;
+}
+.img_box{
+    float: left;
+    width: 200px;
+    margin-left: 40px;
+    height: auto;
+}
+.addres h2{
+    font-family: "Dual"
+}
+.addres{
+    float: right;
+    width: 100%;
+    height: 228px;
+    margin-top: 55px;
+    background: #252828;
+}
+.img_box p{
+    text-align: center;
+    color: #C5996F;
+    margin: 0;
+    margin-top: 10px;
+}
+.img_box a{
+    text-align: center;
+    float: left;
+    width: 100%;
+    text-decoration: none;
+    color: #959595;
+    font-family: rooney,sans;
+}
+.addres{
+    text-align: center;
+    color: #fff;
+    font-family: rooney,sans;
+    float: right;
+    width: 100%;
+}
+.addres p{
+    text-align: center;
+    font-size: 17px;
+    color: #A7A4A4!important;
+	font-family: "Dual";
+}
+.addres span{
+  font-family: "Dual";
+ line-height: 20px;
+    font-size: 13px;  
+}
+.portlet-content h2{
+    color: #A7A4A4;
+}
+.addres a{
+    font-family: "Dual";
+    text-decoration:underline;
+    text-align: center;
+    direction: ltr;
+    color:#fff;
+}
+.mailing_content{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-top:1px solid #ddd;
+}
+.mailing_list{
+    float: left;
+    width: 320px;
+    height: 100px;
+
+    margin-left: 95px;
+    margin-top: 20px;
+}
+.mailing_list button{
+     float: left;
+    margin-left: 0px;
+    border: 1px solid;
+    border-color:#FFCB08;
+    background: #FFCB08;
+    border-radius: 0px 5px 5px 0px;;
+    font-family: "Dual";
+    font-weight: bold;
+    padding-left: 7px;
+    text-align: center;
+    width: 75px;
+    height: 30px;
+    color: #fff;
+}
+.mailing_list input{
+    float: left;
+    margin-left: 8px;
+    border: 1px solid;
+    border-color: #F0F0F0;
+    border-radius: 3px;
+    width: 190px;
+    height: 30px;
+    text-align: left;
+    direction: ltr;
+  font-family: "Dual";
+    font-weight: bold;
+}
+.twit_so{
+    float: left;
+    width: 350px;
+    text-align: left;
+    direction: rtl;
+    padding-left: 8px;
+    margin-left: 34px;
+    margin-top: 16px;
+}
+.twit_so p{
+    text-align: center;
+    direction: ltr;
+    color:#ADADAD;
+    font-family: rooney,sans;
+}
+.twit_so span{
+    text-align: center;
+    width: 100%;
+    float: right;
+    margin-bottom: 15px;
+font-family: "Dual";
+font-weight: bold;
+}
+.twit_so a{
+    color: #CB9A62;
+}
+.mailing_list span{
+  text-align: center;
+width: 82%;
+float: left;
+margin-bottom: 15px;
+margin-top: 5px;
+ font-family: Dual;
+    font-weight: bold;
+}
+.social{
+      float: left;
+    width: 260px;
+    margin-left: 104px;
+    margin-top: 20px;
+    height: 100px;
+}
+.social span{
+        text-align: center;
+    width: 100%;
+    float: right;
+    margin-bottom: 15px;
+ margin-top: 6px;
+   font-family: "Dual";
+    font-weight: bold;
+}
+.social i{
+    font-size: 25px;
+    color: #FFCB08;
+}
+.social i:hover{
+    color: #ADADAD;
+}
+.social a{
+    float: left;
+    width: 30px;
+    height: 30px;
+    /*margin-left: 28px;*/
+	margin-left: 7px;
+    
+}
+footer{
+    float: right;
+    width: 100%;
+    background:#FFFFFF;
+    height: 85px;
+    margin-top: 2px;
+}
+.marg ul li a{
+    color:#A4A6A9;
+}
+.marg{
+    margin-top: 25px;
+   
+}
+.copy_r{
+ float: left;
+    width: 185px;
+    text-align: left;
+    margin-top: 3px;
+    font-family: dual;
+    /*color: #ddd;*/
+	color:#c3c3c3;
+    font-size: 14px;
+    direction: ltr;
+    padding-left: 5px;
+
+}
+.content{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+}
+.nav_sub_top{
+    width: 99%;
+    margin: 0 auto;
+    height: 60px;
+    border: 1px solid;
+    border-bottom-color: #ddd;
+    border-left: none;;
+    border-top: none;
+    border-right: none;
+
+ 
+}
+.nav_sub_top ul{
+    margin-top: 20px;
+    float: left;
+    width: 95%;
+    
+}
+.nav_sub_top ul li a{
+    text-decoration: none;
+    color: #FFCB08;
+    font-family: rooney-sans,Roboto;
+    font-size: 17px;
+      font-family: "Dual";
+    font-weight: bold;
+}
+.page_txt {
+	text-align:left;
+	margin:0px 20px;
+}
+.nav_sub_top a:hover{
+    color:#AAAAAA; 
+}
+.activ_color{
+    color:#919191!important;
+}
+.nav_sub_top a:hover{
+    color: 
+}
+.conent_box_img{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    
+}
+.nav_sub_top ul li{
+    float: left;
+    margin-left: 25px;
+}
+.box_exhibi{
+ float:left;
+	margin: 10px 30px;
+    width: 250px;
+    height: 370px;
+}
+.box_exhibi img{
+   height: auto;
+    width: 200px;
+    cursor: pointer;
+}
+.box_exhibi img:hover{
+   opacity: 0.7;
+}
+.box_exhibi a{
+color: #7A7A7B;
+font-size: 15px;
+font-family: "Dual";
+font-weight: bold;
+text-decoration: none;
+float: left;
+    width: 100%;
+text-align: center;
+}
+.box_exhibi ul li{
+    width: 100%;
+    float: left;
+     padding-left: 35px;
+}
+.d_time2{
+  font-style: normal!important;
+
+}
+.date_time{
+  font-family: "Dual";
+
+    color:#959595; 
+    font-size: 15px;
+}
+
+.box_ex2{
+    height: 470px;
+}
+.box_ex2 li a{
+    text-align: center;
+}
+.box_ex2 .date_time{
+    text-align: center;
+    font-style: italic;
+}
+
+.img_box{
+    width: 200px;
+    float: left;
+}
+.img_box img{
+    width: auto;
+    height:130px 
+}
+.box_exhibi ul{
+   border-bottom-color: #ddd;
+    border-left: none;;
+    border-top: none;
+    border-right: none;    float: left;
+    width: 100%;
+    text-align: left;
+    padding-left: 0px;  
+    margin-top: 15px;
+}
+.last_post{
+    border: 1px solid;
+    float: right;
+    width: 100%;
+    margin-top: 25px;
+    height: auto;
+}
+.last_pic{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-top: 0px; 
+}
+.last_pic hr{
+    width: 960px;
+    float: right;
+    margin-right:2.3%
+}
+.last_pic h6{
+    text-align: left;
+    width: 100%;
+    float: left;
+    font-family: rooney-sans,Roboto;
+    font-size: 20px;
+    margin: 0;
+    padding-left: 32px;
+    margin-top: 10px;
+}
+.exhi_view_content{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-top: 23px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #ddd;
+    margin-bottom: 25px;
+}
+.box_entry_images{
+    float: left;
+    width: 47%;
+    height: auto;
+
+}
+.conent_box_img h2{
+    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 35px;
+}
+.box_entry_images1{
+    float: right;
+    width: 100%;
+    height: auto;
+}
+.marg_Size{
+    width: 960px;
+    margin: 0 auto;
+}
+.exhi_view_content p{
+     /*float: left;*/
+    text-align: left;
+    width: auto;
+    direction: ltr;
+    font-family: "Dual";
+	font-weight: bold;
+    line-height: 28px;
+    color: #959595;
+    font-size: 11px;
+    margin-top: 3px;
+}
+.slider{
+    float: right;
+    width: 479px;
+}
+.entry_right_content{
+    float: right;
+    width: 50%;
+    height: 250px;
+}
+.column_right{
+    width: 50%;
+    margin-left: 
+    height: auto;
+    float: left;
+}
+.column_right h4{
+    text-align: left;
+    font-family: rooney-sans,Roboto;
+}
+.map_addres_about{
+    float: right;
+    width: 100%;
+    height: auto;
+}
+.addres_about{
+    width: 750px;
+    margin: 0 auto;
+    height: auto;
+    margin-top: 25px;
+}
+.addres_about p{
+   font-family: "Dual";
+font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    direction: ltr;
+    color: #ADADAD;
+}
+.addres_about a{
+   margin-left: 5px;
+    color: #FFCB08;
+}
+.map_online{
+    width: 900px;
+    margin: 0 auto;    
+    height: 350px;
+}
+.about_column{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.col_left{
+    float: left;
+    width: 820px;
+    height: auto;
+}
+.col_left strong{
+    margin-left: -10px;
+    float: left;
+}
+.col_left h5{
+    text-align: left;
+    margin: 0;
+    margin-top: 15px;
+    float: left;
+    padding-left: 20px;
+    margin-left: 0px;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+.col_left p{
+    text-align: justify;
+    padding-left: 20px;
+    direction: ltr;
+    padding-right: 20px;
+    color: #959595;
+    margin-top: 35px;
+    font-family:"Dual";
+}
+.col_left span{
+    text-align: left;
+    float: left;
+}
+.col_right{
+    float: right;
+    width: 400px;
+}
+.col_box{
+    float: left;
+    width: 100%;
+    text-align: left;
+    
+   
+}
+.col_box p{
+    text-align: left;
+    direction: ltr;
+    padding-left: 10px;
+    color: #959595;
+}
+.col_box h5{
+    text-align: left;
+    padding-left: 10px;
+    float: left;
+    width: 100%;
+    font-weight: bolder;
+    
+}
+.col_box a{
+    text-align: left;
+    float: left;
+    width: 100%;
+    padding-left: 10px;
+    color:#C5996F; 
+}
+.filter_artist_year{
+    float: right;
+    width: 100%;
+    height: 60px;
+    background: #F0F0F0;
+    margin-top: 0px;
+    
+}
+.filter_artist_year .btn-primary{
+    float: left;
+    margin-left: 8px;
+    margin-top: 14px;
+    background: none;
+    border: none;
+    color: #000;
+    width: auto;
+    outline: none;
+	 font-family: "Dual";
+}
+.filter_artist_year .well{
+    float: left;
+    width: 100%!important;
+    margin-top: 15px;
+    position: relative;
+    border-radius: 0;
+    box-shadow: 0!important;
+    margin-bottom: 10px;
+   
+}
+.filter_artist_year .well a{
+    float: left;
+    font-size: 12px;
+    margin-left: 15px;
+}
+.filter_artist_year #collapseExample{
+    float: left;
+    width: 100%;
+    
+}
+.work_filter {
+	margin-bottom:20px !important;
+	margin-top:-5px !important;
+}
+.filter_artist_year #collapseExample1{
+    float: left;
+    width: 100%;
+    
+}
+.filter_artist_year .btn-primary i{
+    float: right;
+    width: auto;
+    margin-top: -18px;
+    margin-left: 15px;
+}
+.well_artist{
+    float: left;
+    width: 305px;
+    height: auto;
+    margin-left: 10px;
+    position: relative;
+    z-index: 999999999;
+    background: #F5F5F5;
+}
+
+.carousel-control:hover, .carousel-control:focus{
+    color: #FFCB08;
+    
+}
+.well_artist a{
+    float: left;
+    width: 180px;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: rooney-sans,Roboto;
+    color: #646464;
+    font-size: 15px!important;
+    text-decoration: none;
+}
+.well_artist a:hover{
+    background: #fff;
+}
+.filter_artist_year span{
+    float: left;
+    width: 60px;
+    direction: ltr;
+     margin-left: 35px;
+    margin-top: 18px;
+    font-size: 15px;
+ font-family: "Dual";
+    font-weight: bold;
+}
+.years{
+    float: right;
+    width: 100%;
+    z-index: 999999999;
+    position: relative;
+    background: #F5F5F5;
+}
+.years a{
+    color:#D2B090;
+    font-size: 14px!important;
+    margin-top: 10px;
+}
+.content_news_event{
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.box_news{
+    width: 100%;
+    float: left;
+    height: auto;
+}
+.box_news img{
+    float: left;
+    width: 250px;
+    height: auto;
+    margin-left: 30px;
+}
+.box_news p{
+    text-align:justify;
+    float: left;
+    padding-left: 10px;
+    width: 74%;
+    padding-left: 35px;
+    font-family: dual;
+    direction: ltr;
+    color: #B0ADAD;
+line-height: 30px;
+}
+.box_news p a{
+    color: #8C8A8A;
+    font-family: "dual";
+    font-weight: bold;
+ text-decoration: none;
+outline:none;
+}
+.box_news span{
+     float: left;position:relative;
+    margin-left: -18.70%;
+    width: 70px;
+    text-align: center;
+    background:rgba(0,0,0,0.8);
+    color: #fff;
+}
+.box_news img:hover{
+    opacity: 0.8;
+}
+.line_lr{
+    float: left;
+    width: 100%;
+    height: 30px;
+}
+.line_left{
+    float: left;
+    height: 15px;
+    width: 607px;
+    background: url(../images/line-l.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+
+}
+.line_right{
+    float: right;
+    width: 607px;
+    height: 15px;
+    background: url(../images/line-r.png);
+}
+.center_box{
+    border: 1px solid;
+    width: 960px;
+    margin: 0 auto;
+}
+.item{
+    width: 100%;
+    /*height:400px;*/
+	height:423px;
+}
+.item img{
+    width: 100%;
+    height: 423px!important;
+}
+.left .fa-arrow-circle-left, .right .fa-arrow-circle-right{
+    margin-top: 180px;
+    font-size: 45px;
+}
+.carousel-caption{
+  height: auto;
+    font-family: "Dual";
+    text-align: center;
+    padding-bottom: 18px;
+    background: rgba(0,0,0,0.8);
+    border: 1px solid;
+    border-color: #000;
+    color: #C0C0C0!important;
+    font-weight: bold;
+}
+.carousel-indicators{
+    top: 407px;
+    float: left;
+    
+}
+.carousel-indicators li {
+    width: 100px;
+    height: 12px;
+    border-radius: 0;
+    background: rgba(0,0,0,0.9);
+    border-color:#555555;
+}
+.carousel-indicators .active{
+    border:1px solid;
+    border-color: #FFCB08;
+    width: 100px;
+    height: 16px;
+    border-radius: 0;
+    background: #FFCB08;
+    
+}
+.filter_artist_year a{
+ float: left;
+width: 65px;
+text-align: center;
+margin-left: 15px;
+margin-top: 22px;
+font-family: "Dual" !important;
+font-size: 15px !important;
+color: #585757 !important;
+}
+.artist_grid{
+    width: 100%;
+float: right;    height: auto;
+    margin-top: 10px;
+}
+.list_artist{
+    width: 25%;
+    float: right;
+    margin: 0 auto;
+     height: auto;
+    margin-top: -9px!important;
+    margin-bottom: 10px;
+}
+.list_artist a:hover{
+    color: #FFCB08;
+    text-decoration: none;
+}
+.list_artist a{
+    float: left;
+    width: auto;
+    text-align: left;
+    direction: ltr;
+    color: #7A7A7B;
+    font-size: 14px;
+    font-family: tahoma;
+    margin-left: 28px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+	outline:none;
+}
+
+@media
+only screen and (max-width: 480px),
+only screen and (-webkit-max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (   max--moz-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (     -o-max-device-pixel-ratio: 2/1)    and (max-width: 480px),
+only screen and (        max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (                max-resolution: 192dpi) and (max-width: 480px),
+only screen and (                max-resolution: 2dppx)  and (max-width: 480px) { 
+	
+    .logo_left_sobhan{
+        margin: 0; 
+	
+   }
+  
+   .logo_sobhan p{
+      width: 320px;
+       font-size: 45px;
+       text-align: center;
+   }
+    header{
+       height: 95px;
+        background-size:260px;
+        background-position: 60px;
+    }
+    .line_lr{
+        width: auto;
+    }
+    .box_content{
+        width: 320px;
+    }
+    .left .fa-arrow-circle-left, .right .fa-arrow-circle-right{
+        margin-top:70px!important;
+    }
+    .box_content .box_pic{
+        width: 250px!important;
+        margin: 0;
+        margin-top: 55px;
+        margin-right: 54px;
+    }
+    
+    .box_pic img{
+        height: 320px;
+       width: 250px;
+    }
+    .video_box{
+        width: auto;
+        float: right;
+        margin-bottom: 20px;
+        
+    }
+    .video_box{
+        margin-right: 32px;
+      
+    }
+    .video{
+        float: right;
+        width: auto!important;
+        border: 0!important;
+        
+    }
+    .aparat_player_box{
+        width: auto;
+        border: 0!important;
+    }
+    iframe{
+        width: auto!important;
+        border: 0;
+    }
+    .addres p{
+        width: auto;
+        font-size: 15px;
+    }
+    .slide_show{
+        height: auto;
+    }
+  .bl_menu{
+      display: block;
+
+
+  }
+    .menu_top_search{
+        display: block;
+    }
+ .menu_top_search li{
+        display: none;
+    }
+    .menu_top_search .copy_r{
+        display: none;
+    }
+    .marg .scrollup{
+        display: block;
+    }
+.menu_top_search input{
+        display: none;
+    }
+    .menu_top_search .lang{
+        display: none;
+    }
+    .menu_top_search .search{
+          display: none;
+    }
+    .conent_box_img{
+        width: 100%!important;
+	float: left;
+    }
+  .box_exhibi{
+        width: 100%;
+        height: auto;
+       margin: 0 auto;
+       margin-bottom: 25px;
+       float: left;
+        margin-left: 0px!important;
+    }
+    .box_exhibi ul{
+        float: none;
+    }
+   footer{
+       width: auto;
+   }
+    .nav_sub_top{
+        width: auto!important;
+   display: none;
+    }
+    .nav_sub_top a{
+        font-size: 13px!important;
+        
+    }
+  
+    .mailing_content p{
+        text-align: center;
+        font-size: 15px;
+        padding-right: 30px;
+        direction: ltr!important;
+    }
+    hr{
+       display: none;
+    }
+
+.box_exhibi a{
+	
+}
+    .search button{
+       margin: 0!important;
+    }
+    .box_news{
+        float: left;
+    margin: 10px 30px;
+    width: 250px;
+        
+    }
+    .box_news img{
+        height: 340px;
+width: 250px;
+cursor: pointer;
+    }
+    .box_news p{
+      width: 300px;
+        padding-right: 5px;
+        float: left;
+        margin-left: -10px;
+        height: auto;
+    }
+    .box_news span{
+        margin-left: -88.20%;
+    }
+    .filter_artist_year{
+        width: 368px;
+    }
+    .filter_artist_year span{
+        margin: 0;
+        margin-top: 20px;
+	margin-left: 15px;
+    }
+    .left_col1{
+       width: auto;
+        margin: 0;
+    }
+    .left_col1 p{
+        padding-left: 100px;
+        text-align: left;
+        width: 380px;
+        float: right;
+        margin-left: 55px;
+    }
+    .left_col1 h6,h4
+    {
+        width: auto;
+        text-align: right;
+        width: 100%;
+        float: right;
+        direction: rtl;
+       
+        font-size: 12px!important;
+    }
+    .info_artist .box_info_loc{
+       width: 320px;
+       float: right;
+        margin-right: -5%
+    }
+    .item{
+        width: auto;
+        height: auto;
+    }
+    .item img{
+        height:192px!important;
+    }
+    .carousel-indicators{
+        display: none;
+    }
+    .right .fa-arrow-circle-right, .left .fa-arrow-circle-left {
+        margin-top: 80px!important;
+        font-size: 20px;
+    }
+
+    .nothing-found{
+        width: auto!important;
+        
+    }
+    .map_addres_about{
+        width: auto!important;
+        text-align: center;
+    }
+    .addres_about p{
+        text-align: center;
+        width: 300px;
+        margin-left: 5px!important;
+        padding-right: 12px;
+    }
+    .addres_about{
+        width: 300px;
+        
+    }
+   
+    .map_online{
+        width: 320px;
+        margin-right: 24px;
+        float: right;
+    }
+    .map_online .gm-style .gmnoscreen{
+        width:320px;
+    }
+    .about_column{
+        width: auto;
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+    .about_column p{
+        width: auto;
+        padding-left: 0px!important;
+        float: left;
+        padding-right: 45px;
+        text-align: left;
+    }
+   .about_column strong{
+        width: 320px;
+        text-align: center;
+        float: left;
+        
+    }
+    .col_right{
+        float: right;
+        width: auto;
+  	margin-right: 10px;
+    }
+     .col_left{
+        width: 320px;
+       float: left;
+       margin-left: 25px
+    }
+    .col_left p{
+        text-align: left!important;
+ margin-top: 0px;
+    }
+ .col_box span{
+        width: 100%;
+        float: right;
+        text-align: center;
+    }
+    .col_box h5{
+        text-align: center;
+    }
+    .col_box{
+        float: right;
+        width: 320px;
+        margin-right: 15px;
+    }
+
+.exhi_view_content{
+        width:  auto !important;
+    }
+    .exhi_view_content img{
+    }
+    .marg_Size{
+        width: auto;
+    }
+    .right_col{
+        width: auto;
+    }
+    .left_col1{
+        width: auto!important;
+    }
+    .box_info_loc h4{
+        text-align: left;
+        
+        float: left;
+    }
+    .left_col1 h4{
+        float: left;
+       text-align: center;
+        width: 300px;
+    }
+    .left_col1 p{
+        text-align: left!important;
+        float: left;
+        width: auto;
+        margin: 0;
+        padding-left: 15px!important;
+        margin-top: 0!important;
+       direction: ltr;
+        padding-right: 16px;
+        margin-top: 15px!important;
+        line-height: 24px;
+    }
+    .carousel-caption{
+        width: 100%;
+        font-size: 11px;
+        height: 38px;
+        background: rgba(0,0,0,0.6)!important;
+        text-align: center;
+        padding-left: 10px;
+        margin: 0;
+        margin-bottom: -20px!important;
+        float: right;
+        padding-top: 4px!important;
+        margin-right: -54px;
+        border:0;
+    
+        
+    }
+  .image_alt{
+        padding-left: 5px;
+    }
+    .box_pic p{
+        text-align: center;
+        width: 100%;
+        font-weight: bolder;
+	float:left;
+     	margin-left: -4px;   
+    }
+    .box_pic span{
+        width: 100%;
+        text-align: center;
+        padding-left: 0px;
+    }
+    .left_col1 h6{
+        width: 100%;
+       padding-left: 20px;
+text-align: left;
+    }
+    .left_col1 h4{
+        font-weight: bolder;
+        width: 100%;
+        font-size: 15px!important;
+        text-align: left;
+	padding-left: 20px;
+        
+    }
+    .mailing_list{
+        margin-left: 28px;
+    }
+    .logo_left_sobhan img{
+        width: 65px;
+        margin-top: 0;
+    }
+    .twit_so{
+        margin-left: 19px!important;
+    }
+ .twit_so strong{
+        width: 320px;
+        text-align: center;
+        padding-right: 14px;
+        float: left;
+    }
+  .twit_so span{
+        padding-right: 35px;
+    }
+    .social span{
+        padding-left: 2px;
+    }
+ .next a{
+        float: left;
+        margin-top:15px;
+        width: 100%;
+        text-align: center;
+        margin-left: auto!important;
+    }
+    ul.yiiPager a:link{
+        padding: 10px;
+        float: right;
+        margin-top: 5px;
+        
+        
+    }
+ .artist-work{
+        margin-top: 15px!important;
+        float: left;
+    }
+ .info_artist{
+        width: 320px;
+    }
+ .mailing_list span{
+        padding-left: 50px
+        
+    }
+
+ .mailing_list input{
+        margin-left: 25px
+    }
+    .social{
+        margin-left: 50px;
+    }
+.box_exhibi ul li{
+padding-left: 25px;
+padding-top: 10px;
+text-align: center;
+
+	}
+.page_title{
+padding-top: 11px;
+        width: auto;
+    }
+ 
+.box_exhibi ul li a{
+	width: 100%;
+     text-align:center;
+    float: right;
+    padding-left: 16px;
+}
+} 

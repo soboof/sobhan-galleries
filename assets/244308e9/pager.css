@@ -1,0 +1,5 @@
+/* Stand-in for Yii 1.1 CLinkPager styles (not preserved in the web archive).
+ * The site's own pager rules are in css/style_sobhan.css. */
+ul.yiiPager .hidden {
+	display: none;
+}
