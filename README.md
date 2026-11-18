@@ -1,65 +1,83 @@
-# Sobhan Galleries — restored website (March 2016)
+# Sobhan Gallery website
 
-A static restoration of **sobhangalleries.ir** as the Internet Archive's Wayback Machine
-captured it on 17–19 March 2016
+The website of **Sobhan Gallery**, Tehran (founded 2004): 55 artists and 907 artworks from the gallery's
+artist catalogues, past exhibitions, and visiting information.
+
+It began as a restoration of **sobhangalleries.ir** as the Internet Archive captured it in March 2016
 (e.g. <https://web.archive.org/web/20160318174801/http://www.sobhangalleries.ir/single/14/Hani-Najm->).
-
-Each page is the original archived HTML. Only the links were changed so the site runs
-from plain files, without the original PHP (Yii) backend. The original stylesheets,
-scripts, fonts and site graphics are included as the archive saved them.
+In 2026 every page was rebuilt in a new theme. The yellow Sobhan logo stays. Every original address still works.
 
 ## Viewing it
 
 - Open `index.html` in a browser. Everything works straight from disk.
 - Or serve the folder with any static web server, or publish it with GitHub Pages.
-  On GitHub Pages, the original addresses `/home`, `/about` and `/single/14/Hani-Najm-` work again.
+
+## The theme
+
+One stylesheet and one script for every page. No framework, no build step.
+
+| File | What it does |
+| --- | --- |
+| `css/theme.css` | The whole design: warm gallery-white background, near-black type, Sobhan yellow (`#ffcb08`) as the accent. Headings in Cormorant Garamond, text in Manrope (Google Fonts). Works on phones (slide-in menu below 820 px). |
+| `js/theme.js` | Mobile menu, landing slideshow, artist filter, full-screen artwork viewer (arrow keys, swipe, Esc), and site search. Pages still work without it. |
+| `js/search-index.js` | The search list: every artist, artwork and exhibition. |
+| `css/font-awesome.min.css` | Icons (kept from the 2016 site). |
+
+The 2016 stylesheets and scripts (`bootstrap*`, `style_sobhan.css`, `intro_css.css`, `mobile_menu_fathi.css`,
+`js/main.js`, `js/static.js`, jQuery plugins) are still in the folder but no page uses them now.
 
 ## Pages
 
-| Original address | File |
+| Page | File |
 | --- | --- |
-| `/` (intro splash) | `index.html` |
-| `/home` | `home.html` |
-| `/exhibitions` | `exhibitions.html` |
-| `/exhibitions?time_exhibition=1` … `4` | `exhibitions-current.html`, `-upcoming`, `-past`, `-online` |
-| `/artists` | `artists.html` |
-| `/artists?artist_list=1` (List view) | `artists-list.html` * |
-| `/about` | `about.html` |
-| `/news&event` | `news-event.html` |
-| `/news`, `/event` | `news.html`, `event.html` |
-| `/search` | `search.html` (page 2: `search-2.html` *) |
-| `/single/12/Arash-Alimohammadi` | `single/12/Arash-Alimohammadi.html` |
-| `/single/13/Raziyeh-Poursalary` | `single/13/Raziyeh-Poursalary.html` |
-| `/single/14/Hani-Najm-` | `single/14/Hani-Najm-.html` |
-| `/single/7` … `/single/11` (exhibitions) | `single/7/Between-us-and-Nasim.html` … `single/11/Imaginary-Thoughts.html` * |
+| Landing: logo, slideshow of works, about, featured artists, recent exhibitions, map | `index.html` (`home.html` forwards here) |
+| Artists, grid view with filter | `artists.html` |
+| Artists, A–Z list | `artists-list.html` |
+| One page per artist (55) | `artists/<Name>.html`; three keep their 2016 addresses: `single/12/Arash-Alimohammadi.html`, `single/13/Raziyeh-Poursalary.html`, `single/14/Hani-Najm-.html` |
+| Exhibitions (All, Current, Upcoming, Past, Online) | `exhibitions.html`, `exhibitions-current.html`, `-upcoming`, `-past`, `-online` |
+| Exhibition pages | `single/7/Between-us-and-Nasim.html` … `single/11/Imaginary-Thoughts.html` |
+| "In Time of Sorrow" (online photography exhibition: statement and 15 photographs in two series) | `exhibitions/In-Time-of-Sorrow.html`, photos in `upload/exhibitions/in-time-of-sorrow/` |
+| About, with address, phone, email and map | `about.html` |
+| News & Events (hidden) | `news-event.html`, `news.html`, `event.html` |
+| Search (hidden) | `search.html` (`search-2.html` forwards here; `?q=` or the old `?search_text=` work) |
 
-\* Not captured by the archive; rebuilt from the site's own templates and listings (see below).
+Search and News & Events are hidden for now: no menu or page links to them, but the pages still work at
+their addresses. To show them again, add them back to `NAV` (and the search icon and footer link) in the build script.
 
-## What was missing and how it was filled in
+## Artist pages
 
-- **Photos.** The archive kept none of the uploaded images: the 4 home slider images and
-  the artist and exhibition pictures. Each one is now a plain gray image saved under its
-  **original file name** in `upload/`. Put the real files in with the same names and they appear everywhere.
-- **Press release.** `upload/filemanager/2016/03/12/najm1.pdf` (Hani Najm) was not kept. It is now a one-page stand-in.
-- **Exhibition pages 7–11.** These were never captured. They use the artist page template and show
-  the title, dates and type from the exhibition listings. Their descriptions are lost.
-- **Artists "List" view and search page 2.** These were generated from the archived Artists and Search pages.
-- **Header logo, favicons, Telegram icon, loading spinner.** None of these were kept. The logo and
-  favicons were made from the intro logo (`images/logo1.png`). The Telegram icon and spinner were redrawn.
-- **Search, News & Events tabs, newsletter.** The server used to handle these. Now `js/static.js`
-  searches titles in the browser and marks the selected tab. The newsletter has no backend,
-  so it shows the site's own "please try again" message.
-- **Map.** The 2016 Google Maps script no longer loads without an API key. The About page now
-  uses a Google Maps embed of the same coordinates.
-- **Framework files.** Yii's list-view script and styles (`assets/2a94111c`, `assets/244308e9`,
-  `jquery.ba-bbq.js`) were not kept. Small stand-ins are in their place.
-- **Stylesheet dates.** The archive only captured the CSS/JS in 2017–2018. The 2016 pages link
-  to the same files, and those later captures are what is used here.
-- **Menu icons.** `img/nucleo-icon-*.svg` (referenced by `css/mobile_menu_fathi.css`) already
-  returned 404 on the live site, so they are left out.
+Every artist page uses the same template, in this order:
+
+1. **Header**: portrait, name, born, from, number of works, years the works are dated, links to the sections below.
+2. **Statement**: the artist's statement or essay from the catalogue, when it has one.
+3. **Works**: every artwork with title, medium, size, year, catalogue number and "Sold" where marked.
+   Series headings and texts placed between works in the catalogue appear in the same place.
+   Clicking a work opens it full screen.
+4. **History of experience**: the CV as a list after the works: one group per heading (Education,
+   Solo exhibitions, Group exhibitions, Awards…), one row per entry with the year on the left.
+5. Source catalogue, and links to the previous and next artist.
+
+Images are in `upload/artists/<name>/`: `NN.jpg` full size, `NN-t.jpg` thumbnail, `portrait.jpg`, `card.jpg`.
+
+Names are spelled as each catalogue spells them. Obvious typos in artwork titles and media were corrected
+(e.g. "Untitle", "Wellcoming"). CV text is as printed.
+
+## Adding an exhibition with photos
+
+Each one is a JSON file in the build folder (`_build/exhibitions/<slug>.json`: title, status, statement,
+and series of photos with alt text). `prep_exhibition.py` copies the photos into `upload/exhibitions/<slug>/`
+(`NN.jpg` and a 640 px `NN-t.jpg`), and the build script makes the page and lists it under Exhibitions
+and on the landing page. The page links add `?v=…` to `theme.css` and `theme.js`, taken from their contents,
+so browsers load the new files after every change.
+
+## Not known
+
+- **Exhibition descriptions and photos.** The archive kept only the title, dates and type of the five exhibitions.
+- **News & Events.** Nothing was ever posted, so those pages say so.
+- **Mailing list.** There is no server. "Join the mailing list" opens an email to the gallery.
+- **Map.** Uses the same coordinates as the 2016 site.
 
 ## Content
 
-Text, artist biographies and the logo belong to Sobhan Gallery and the artists.
-Bootstrap, Font Awesome and jQuery are under their own open-source licenses.
-Website design by Faryan Academy (2015).
+Text, artworks, artist biographies and the logo belong to Sobhan Gallery and the artists.
+Font Awesome is under its own open-source license. The original 2016 site was designed by Faryan Academy (2015).
