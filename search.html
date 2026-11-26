@@ -8,15 +8,17 @@
 <meta property="og:title" content="Search — Sobhan Gallery">
 <meta property="og:description" content="Search the Sobhan Gallery artists, artworks and exhibitions.">
 <meta name="theme-color" content="#faf8f3">
+<script>(function(){var t;try{t=localStorage.getItem("sobhan-theme")}catch(e){}if(t!=="dark"&&t!=="light")t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})();</script>
 <link rel="icon" href="images/fav-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/theme.css?v=92a38625">
+<link rel="stylesheet" href="css/theme.css?v=b546635c">
 </head>
 <body>
 <header class="site-head"><div class="wrap">
   <a class="brand" href="index.html" aria-label="Sobhan Gallery home"><img src="images/logo.png" alt="" width="44" height="53"><span class="brand-word">SOBHAN<small>GALLERY</small></span></a>
   <nav class="nav" aria-label="Main"><a href="exhibitions.html">Exhibitions</a><a href="artists.html">Artists</a><a href="about.html">About</a></nav>
+  <button class="theme-btn" type="button" aria-label="Night mode" aria-pressed="false" title="Switch to night mode"><i class="fa fa-moon-o" aria-hidden="true"></i><i class="fa fa-sun-o" aria-hidden="true"></i></button>
   <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></header>
 <main>
@@ -24,6 +26,7 @@
 <form class="search-box" role="search" action="search.html"><label class="sr-only" for="q">Search</label>
 <input id="q" name="q" type="search" placeholder="Artists, artwork titles, media, exhibitions" autocomplete="off" autofocus><button type="submit">Search</button></form></div></section>
 <section class="wrap results" id="results" aria-live="polite" style="padding-bottom:96px"></section>
+<nav class="crumbs-foot" aria-label="Breadcrumb"><div class="wrap"><p class="crumbs"><a href="index.html">Home</a><span>/</span>Search</p></div></nav>
 </main>
 <footer class="site-foot"><div class="wrap">
   <div class="foot-top">
@@ -36,6 +39,6 @@
     <nav aria-label="Footer"><a href="index.html">Home</a><a href="exhibitions.html">Exhibitions</a><a href="artists.html">Artists</a><a href="about.html">About</a></nav></div>
 </div></footer>
 <script src="js/search-index.js" defer></script>
-<script src="js/theme.js?v=92a38625" defer></script>
+<script src="js/theme.js?v=b546635c" defer></script>
 </body>
 </html>

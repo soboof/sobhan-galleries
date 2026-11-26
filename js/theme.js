@@ -4,6 +4,29 @@
 	var $ = function (s, r) { return (r || document).querySelector(s); };
 	var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
+	// ---- day and night mode: the page head already applied the saved choice (or the system setting) ----
+	var root = document.documentElement, themeBtn = $('.theme-btn'), themeMeta = $('meta[name="theme-color"]');
+	var saved = function () { try { return localStorage.getItem('sobhan-theme'); } catch (err) { return null; } };
+	var setTheme = function (t, save) {
+		var night = t === 'dark';
+		root.setAttribute('data-theme', night ? 'dark' : 'light');
+		if (save) { try { localStorage.setItem('sobhan-theme', night ? 'dark' : 'light'); } catch (err) { /* private mode: this page only */ } }
+		if (themeBtn) {
+			themeBtn.setAttribute('aria-pressed', night ? 'true' : 'false');
+			themeBtn.title = night ? 'Switch to day mode' : 'Switch to night mode';
+		}
+		if (themeMeta) themeMeta.setAttribute('content', night ? '#121110' : '#faf8f3');
+		if (window.sobhanTone) window.sobhanTone();
+	};
+	setTheme(root.getAttribute('data-theme'), false);
+	if (themeBtn) themeBtn.addEventListener('click', function () { setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true); });
+	// until the visitor picks a mode, follow the system as it changes (e.g. at sunset)
+	if (window.matchMedia) {
+		var mq = window.matchMedia('(prefers-color-scheme: dark)');
+		var follow = function (e) { if (!saved()) setTheme(e.matches ? 'dark' : 'light', false); };
+		if (mq.addEventListener) mq.addEventListener('change', follow); else if (mq.addListener) mq.addListener(follow);
+	}
+
 	// ---- mobile menu ----
 	var menuBtn = $('.menu-btn');
 	if (menuBtn) {
@@ -55,9 +78,10 @@
 			var img = $('img', slides[cur]);
 			if (!img) return;
 			if (!img.complete || !img.naturalWidth) { img.addEventListener('load', tone, { once: true }); return; }
+			// desktop shows the artwork smaller on the dark stage (not "cover"): the text then sits on dark, so it stays light
 			var t = lum(img, 0.06, 0.28), b = lum(img, 0.68, 0.96);
-			if (t !== null) show.setAttribute('data-top', t > 0.58 ? 'light' : 'dark');
-			if (b !== null) show.setAttribute('data-bottom', b > 0.58 ? 'light' : 'dark');
+			show.setAttribute('data-top', t !== null && t > 0.58 ? 'light' : 'dark');
+			show.setAttribute('data-bottom', b !== null && b > 0.58 ? 'light' : 'dark');
 			if (window.sobhanTone) window.sobhanTone();
 		};
 		window.addEventListener('resize', tone);
@@ -126,12 +150,14 @@
 				fw.style.transform = 'translate(' + (wa.left + (wb.left - wa.left) * e) + 'px,' + (top0 + (wb.top - top0) * e) + 'px) scale(' + k + ')';
 				// GALLERY slides from beside SOBHAN (one line) down under it (two lines) and shrinks to the bar's size
 				fb.style.transform = 'translate(' + (shape.dx * r) + 'px,' + (shape.dy * r) + 'px) scale(' + (shape.s1 + (1 - shape.s1) * e) + ')';
-				// from the slide's contrast colour to the bar's ink as the bar fills in
-				var light = show && show.getAttribute('data-top') === 'light', c0 = light ? 22 : 255;
+				// from the slide's contrast colour to the bar's ink (day or night) as the bar fills in
+				var light = show && show.getAttribute('data-top') === 'light';
+				var c0 = light ? [22, 21, 19] : [255, 255, 255];
+				var c1 = (getComputedStyle(root).getPropertyValue('--ink-rgb') || '22, 21, 19').split(',').map(function (v) { return parseFloat(v) || 0; });
 				// keep the slide colour until the bar is mostly there, then switch quickly (a mid-grey would vanish on the artwork)
 				var q = clamp((bar - 0.4) / 0.3); q = q * q * (3 - 2 * q);
-				var mix = function (a, b) { return Math.round(a + (b - a) * q); };
-				fw.style.color = 'rgb(' + mix(c0, 22) + ',' + mix(light ? 21 : 255, 21) + ',' + mix(light ? 19 : 255, 19) + ')';
+				var mix = function (i) { return Math.round(c0[i] + (c1[i] - c0[i]) * q); };
+				fw.style.color = 'rgb(' + mix(0) + ',' + mix(1) + ',' + mix(2) + ')';
 				fw.style.textShadow = light ? 'none' : '0 1px 14px rgba(0,0,0,' + (0.5 * (1 - q)).toFixed(3) + ')';
 			}
 			head.style.setProperty('--bar', bar.toFixed(3));
